@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Toast animations */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+.animate-fade-out {
+  animation: fade-out 0.3s ease-in forwards;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark mode base styles - TRUE DARK */
+.dark body {
+  background-color: #000000; /* pure black */
+  color: #f9fafb; /* gray-50 - high contrast */
+}
+
+.dark .bg-white {
+  background-color: #111827 !important; /* gray-900 */
+}
+
+.dark .bg-gray-50 {
+  background-color: #000000 !important; /* pure black */
+}
+
+.dark .bg-gray-100 {
+  background-color: #111827 !important; /* gray-900 */
+}
+
+.dark .bg-gray-200 {
+  background-color: #1f2937 !important; /* gray-800 */
+}
+
+.dark .text-gray-900 {
+  color: #ffffff !important; /* pure white */
+}
+
+.dark .text-gray-700 {
+  color: #f3f4f6 !important; /* gray-100 - very light for high contrast */
+}
+
+.dark .text-gray-600 {
+  color: #e5e7eb !important; /* gray-200 */
+}
+
+.dark .text-gray-500 {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af !important; /* gray-400 */
+}
+
+.dark .border-gray-100 {
+  border-color: #1f2937 !important; /* gray-800 */
+}
+
+.dark .border-gray-200 {
+  border-color: #374151 !important; /* gray-700 */
+}
+
+.dark .border-gray-300 {
+  border-color: #4b5563 !important; /* gray-600 */
+}
+
+.dark .border-gray-400 {
+  border-color: #6b7280 !important; /* gray-500 */
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #111827 !important; /* gray-900 */
+  border-color: #374151 !important; /* gray-700 */
+  color: #f9fafb !important; /* gray-50 */
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #10b981 !important; /* emerald-500 */
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2) !important;
+}
+
+.dark input::placeholder {
+  color: #9ca3af !important; /* gray-400 */
+}
+
+/* Button overrides for dark mode */
+.dark button {
+  color: #e5e7eb !important;
+}
+
+.dark .bg-emerald-600 {
+  background-color: #059669 !important; /* emerald-600 */
+}
+
+.dark .bg-emerald-700 {
+  background-color: #047857 !important; /* emerald-700 */
+}
+
+.dark .bg-gray-800 {
+  background-color: #111827 !important; /* gray-900 */
+}
+
+.dark .bg-gray-700 {
+  background-color: #1f2937 !important; /* gray-800 */
+}
+
+.dark .bg-gray-600 {
+  background-color: #374151 !important; /* gray-700 */
+}
+
+/* Background color overrides for dark mode */
+.dark .bg-amber-50 {
+  background-color: #78350f !important; /* amber-900 */
+}
+
+.dark .bg-amber-100 {
+  background-color: #92400e !important; /* amber-800 */
+}
+
+.dark .bg-emerald-50 {
+  background-color: #064e3b !important; /* emerald-900 */
+}
+
+.dark .bg-teal-100 {
+  background-color: #134e4a !important; /* teal-900 */
+}
+
+.dark .bg-blue-50 {
+  background-color: #1e3a8a !important; /* blue-900 */
+}
+
+.dark .bg-indigo-100 {
+  background-color: #3730a3 !important;; /* indigo-900 */
+}
+
+.dark .bg-yellow-50 {
+  background-color: #713f12 !important; /* yellow-900 */
+}
+
+/* Chart specific dark mode */
+.dark .recharts-cartesian-grid-horizontal line,
+.dark .recharts-cartesian-grid-vertical line {
+  stroke: #374151 !important;
+}
+
+.dark .recharts-text {
+  fill: #9ca3af !important;
+}
+
+.dark .recharts-legend-item-text {
+  color: #d1d5db !important;
+}
+
+.dark .recharts-tooltip-wrapper {
+  color: #111827 !important;
+}
+
+.dark .recharts-default-tooltip {
+  background-color: #1f2937 !important;
+  border: 1px solid #374151 !important;
+  color: #f9fafb !important;
+}
+
+.dark .recharts-pie-label-text {
+  fill: #e5e7eb !important;
+}
+
+/* Dark mode gradient overrides - convert light gradients to dark */
+.dark .from-emerald-50 {
+  --tw-gradient-from: #064e3b !important; /* emerald-900 */
+}
+
+.dark .to-teal-100 {
+  --tw-gradient-to: #134e4a !important; /* teal-900 */
+}
+
+.dark .from-blue-50 {
+  --tw-gradient-from: #1e3a8a !important; /* blue-900 */
+}
+
+.dark .to-indigo-100 {
+  --tw-gradient-to: #3730a3 !important; /* indigo-900 */
+}
+
+/* Ensure smooth gradient stops */
+.dark .bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-from), var(--tw-gradient-to)) !important;
+}
